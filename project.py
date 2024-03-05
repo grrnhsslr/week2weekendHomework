@@ -31,6 +31,7 @@ items = {
 
 cart = {}
 
+
 def shopping_cart():
     item_name = input('To add an item please enter a name ')
     if item_name not in items.keys():
@@ -48,6 +49,7 @@ def shopping_cart():
             quantity = input("how many would you like? ")
             cart[item_name] = items[item_name]
             cart[item_name]['quantity'] = quantity
+
 
 def checkout():
     total = 0.0
@@ -90,7 +92,8 @@ type remove to remove items from your cart, type show to see available items or 
             booler = False
 
         elif prompt == 'quit':
-            print('Thank you for shopping here')
+            checkout()
             booler = False
+
 
 main()
